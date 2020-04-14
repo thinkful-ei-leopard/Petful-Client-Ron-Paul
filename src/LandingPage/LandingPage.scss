@@ -1,0 +1,87 @@
+@import '../styles/_breakpoints.scss';
+@import '../styles/_variables.scss';
+
+body {
+  font-family: Roboto Mono;
+}
+
+.LandingPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.dogcat {
+  display: flex;
+  width: 300px;
+  margin: 0;
+  padding-bottom: 2rem;
+}
+
+.header {
+  font-size: 2rem;
+  font-family: Roboto Mono;
+  text-align: center;
+  color: #222;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: var(--main);
+  margin: 0 auto;
+}
+
+@include tabletLandscape {
+  p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    width: 60%;
+  }
+}
+
+.first-come {
+  font-style: italic;
+}
+
+.adopt-button {
+  text-align: center;
+  background-color: var(--green);
+  text-decoration: none;
+  margin: 2rem 1rem;
+  display: block;
+  width: 200px;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+  border: 2px solid var(--main);
+}
+
+.adopt-button p {
+  color: var(--highlight);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: Roboto Mono, monospace;
+}
+
+.adopt-button:hover {
+  background-color: rgb(255, 250, 111);
+  cursor: pointer;
+}
+
+@include mobileLandscape {
+  .dogcat {
+    width: 400px;
+  }
+
+  .header {
+    font-size: 3rem;
+  }
+
+  p {
+    max-width: 80%;
+  }
+}
