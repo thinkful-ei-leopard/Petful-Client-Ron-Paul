@@ -19,6 +19,10 @@ on the website and they will be added to another FIFO Queue. After you've waited
 * Express
 * PostgreSQL
 
+## Screenshots
+![Demo landing page with a dog and cat](https://user-images.githubusercontent.com/7984141/79177606-1485f800-7db8-11ea-9e2f-ab8ba0ee043d.png)
+---
+![Preview of an animal adoption app](https://user-images.githubusercontent.com/7984141/79177596-10f27100-7db8-11ea-8f7a-aba136a58d96.png)
 
 ## Authors
 [Ron Martin](https://github.com/Izzle) and [Paul Baisley](https://github.com/wavinginspace)
