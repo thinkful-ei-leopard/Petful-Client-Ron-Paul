@@ -37,8 +37,8 @@ export class Adoption extends Component {
   getPeopleAndPets = async () => {
     // get all people and pets on component
     const [peopleRes, petsRes] = await Promise.all([
-      fetch(`${config.API_ENDPOINT}people`),
-      fetch(`${config.API_ENDPOINT}pets`),
+      fetch(`${config.API_ENDPOINT}/people`),
+      fetch(`${config.API_ENDPOINT}/pets`),
     ]);
     if (!peopleRes.ok) return peopleRes.json().then((e) => Promise.reject(e));
     if (!petsRes.ok) return petsRes.json().then((e_1) => Promise.reject(e_1));
@@ -60,7 +60,7 @@ export class Adoption extends Component {
     // e.preventDefault();
     const { fakePeople } = this.state;
     // * POST NEW PERSON
-    await fetch(`${config.API_ENDPOINT}people`, {
+    await fetch(`${config.API_ENDPOINT}/people`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -106,7 +106,7 @@ export class Adoption extends Component {
   };
 
   handleAdopt = async (type, both = false) => {
-    await fetch(`${config.API_ENDPOINT}pets`, {
+    await fetch(`${config.API_ENDPOINT}/pets`, {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json',
